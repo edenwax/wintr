@@ -1,0 +1,605 @@
+/* lets go wintr */
+* {
+ 	-moz-box-sizing: border-box;
+ 	-webkit-box-sizing: border-box;
+ 	box-sizing: border-box;	
+}
+body, html {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+	color: #222;
+	height: 100%;
+}
+#page-wrap {
+	min-height: 100%;
+}
+.page-wrap:after {
+	content: "";
+	display: block;
+}
+#warning {
+	height: 40px;
+	line-height: 40px;
+	background:#dd2828;
+}
+#warning h1 {
+	font-size: 1em;
+	text-align: center;
+	color: #fff;
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+	color: #dd2828;
+}
+header {
+	max-width: 1140px;
+	height: 250px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+
+
+/* logo */
+#logo {
+	margin: 30px 0;
+	background-image: url(../img/icon_gray.png);
+	background-size: 70%;
+	background-repeat: no-repeat;
+}
+
+#logo a {
+	font-size: 2em;
+	font-weight: 600;
+}
+	#logo a img {
+	}
+#logo p {
+	font-size: 0.5em;
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+
+/* logo */
+
+
+/* nav party */
+
+#nav {
+	margin: 20px 0;
+	flex-grow: 1;
+}
+#nav ul {
+	list-style-type: none;
+}
+	#nav li {
+		float: left;
+		margin: 5px;
+	}
+		#nav li a {
+			padding: 20px;
+			border: 1px solid #fff;
+		}
+			#nav li a:hover {
+				border: 1px solid #e0e0e0;
+			}
+
+/* nav party */
+
+
+/* account control */
+
+#user {
+	width: 200px;
+	min-height: 40px;
+	font-weight: 500;
+	margin: 20px 0;
+}
+	#greeting {
+		display: block;
+		padding: 20px;
+		cursor: pointer;
+		border: 1px solid #cecece;
+		border-radius: 3px;
+		transition: border .2s ease-in-out;
+	}
+		#greeting:hover {
+			border: 1px solid #dd2828;
+		}
+	#user ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		background: #fff;
+	}
+		#user li {
+			width: 200px;
+			border-bottom: 1px solid #e0e0e0;
+		}
+			#user li a {
+				display: block;
+				padding: 20px;
+				color: #444;
+			}
+				#user li a:hover {
+					color: #dd2828;
+				}
+				#user li:last-child {
+					border-bottom: 0;
+				}
+		#user-drop {
+			display: none;
+		}
+		#user-out {
+			list-style-type: none;
+		}
+			#user-out li a {
+				padding: 10px;
+			}
+
+/* account control */
+
+#content {
+	max-width: 1140px;
+	margin: 0 auto;
+  	flex: 1 0 auto;
+  	display: flex;
+  	flex-direction: column;
+}
+.hidden {
+	display: none;
+}
+#upload-form {
+	overflow: hidden;
+	display: block;
+}
+	#upload-form h1 {
+		text-align: center;
+	}
+.upload-btn-wrapper {
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	cursor: pointer;
+}
+.btn {
+	color: #dd2828;
+	background: rgba(0,0,0,0);
+	padding: 8px 20px;
+	border: 0;
+	font-size: 20px;
+	font-weight: 500;
+	width: 1138px;
+	height: 150px;
+	text-transform: lowercase;
+	cursor: pointer;
+	position: relative;
+	transition: color .1s linear .4s;
+}
+	.upload-btn-wrapper {
+		transition: border .7s ease-in-out;
+		border: 1px solid #cecece;
+		border-radius: 3px;
+		cursor: pointer;
+	}
+	.upload-btn-wrapper:hover {
+		border: 1px solid #dd2828;
+	}
+		.upload-btn-wrapper:hover .btn {
+			color: #fff;
+		}
+
+.upload-btn-wrapper:before {
+  content: "";
+  position: absolute;
+  background: #dd2828;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  transition: top 1s ease-in-out;
+}
+
+.upload-btn-wrapper:hover:before {
+  top: 0;
+}
+
+.upload-btn-wrapper input[type=file] {
+	font-size: 100px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+ 	cursor: pointer;
+ 	width: 100%;
+ 	height: 150px;
+}
+
+/* ANIMATION STATION */
+
+@keyframes slideDownFromTop {
+  0% {
+    margin-top: -50px;
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+/* ANIMATION STATION */
+
+#uploader {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	max-width: 1140px;
+}
+.upload-guidelines {
+	max-width: 1140px;
+}
+	.upload-guidelines h3 {
+		color: #dd2828;
+		font-weight: 500;
+		font-size: 1.4em;
+		margin: 30px 0 10px 0;
+		padding: 0;
+	}
+		.upload-guidelines h3 div {
+			float: left;
+			display: inline-block;
+			width: 40px;
+		}
+		.upload-guidelines ul {
+			margin: 0;
+			padding: 0;
+		}
+			.upload-guidelines li {
+				line-height: 2em;
+				margin-bottom: 5px;
+			}
+				.upload-guidelines li div {
+					display: inline-block;
+				}
+					.upload-guidelines li div:first-child {
+						float: left;
+						width: 40px;
+					}
+					.upload-guidelines li div:last-child {
+						float: left;
+						width: 500px;
+					}
+.uploaded {
+	width: 250px;
+	height: 400px;
+	overflow: auto;
+	display: inline-block;
+	margin: 0 0 20px 0;
+	text-align: center;
+}
+	.uploaded .up_img {
+		height: 250px;
+	}
+	.uploaded .up_img img {
+		max-width: 250px;
+		max-height: 250px;
+		height: auto;
+		overflow: hidden;
+		opacity: 0;
+		margin-top: -50px;
+		animation: 1s ease-in-out 0s 1 slideDownFromTop forwards;
+	}
+
+	.uploaded p {
+		font-weight: 600;
+		font-size: 1em;
+		line-height: 2em;
+	}
+	.uploaded p a {
+		border-bottom: 2px solid #dd2828;
+	}
+
+	.uploaded input[type=text] {
+		width: 250px;
+		height: auto;
+		padding: 13px 10px;
+		font-size: 0.9em;
+		border: 1px solid #e0e0e0;
+		border-bottom-left-radius: 3px;
+		float: left;
+		display: inline-block;
+	}
+	.hotlink {
+		position: relative;
+	}
+	.tool-tip {
+		background: #dd2828;
+	    opacity: 0;
+	    transition: all .2s ease-in-out;
+	    width: 120px;
+	    color: #fff;
+	    font-weight: 600;
+	    font-size: 0.8em;
+	    text-align: center;
+	    border-radius: 3px;
+	    padding: 5px 0;
+	    position: absolute;
+	    z-index: 1;
+	    bottom: 150%;
+	    left: 50%;
+	    margin-left: -60px;
+	}
+	.tool-tip::after {
+	    content: "";
+	    position: absolute;
+	    top: 100%;
+	    left: 50%;
+	    margin-left: -5px;
+	    border-width: 5px;
+	    border-style: solid;
+	    border-color: #dd2828 transparent transparent transparent;
+	}
+	.hotlink:hover .tool-tip {
+		opacity: 1;
+	}
+
+#footer, #page-wrap:after {
+	width: 1140px;
+	margin: 0 auto;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	display: block;
+}
+
+/* uploads */
+	.uh-underline {
+		color: #dd2828;
+	}
+.uploads-main {
+	text-align: center;
+}
+	.paging {
+		width: 1140px;
+		margin: 0 auto;
+		display: block;
+	}
+		.paging .prev-link {
+			float: left;
+			text-align: left;
+			width: 200px;
+		}
+		.paging .page-count {
+			float: left;
+			text-align: center;
+			width: 740px;
+		}
+		.paging .next-link {
+			float: right;
+			text-align: right;
+			width: 200px;
+		}
+		.paging a {
+			background: #fff;
+			border: 1px solid #dd2828;
+			border-radius: 3px;
+			padding: 2px 15px;
+			color: #dd2828;
+			font-weight: 600;
+			transition: all .2s ease-in-out;
+		}
+			.paging a:hover {
+				background: #dd2828;
+				color: #fff;
+			}
+			.paging .disabled {
+				background: #fff;
+				border: 1px solid #e0e0e0;
+				border-radius: 3px;
+				padding: 2px 15px;
+				color: #dcdcdc;
+				font-weight: 600;
+			}
+			.paging i {
+				padding-right: 10px;
+			}
+.uploads-wrap {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 1140px;
+	height: auto;
+	overflow: auto;
+}
+.uploads-main {
+	width: 230px;
+	margin: 0 0 20px 0;
+	border-radius: 3px;
+	background: #f3f3f3;
+	transition: all .1s ease-in-out;
+}
+	.uploads-main:hover {
+		background: #dedddd;
+	}
+	.uploads-main img {
+		height: 200px;
+		width: 200px;
+		border-radius: 3px;
+	}
+	.uploads-main div {
+		width: 230px;
+		overflow: hidden;
+	}
+	.uploads-main input[type=text] {
+		width: 190px;
+		height: auto;
+		padding: 13px 10px;
+		font-size: 0.7em;
+		border: 1px solid #f3f3f3;
+		border-right: 0;
+		border-bottom-left-radius: 3px;
+		float: left;
+		display: inline-block;
+	}
+	.uploads-main button {
+		cursor: pointer;
+		border: 1px solid #f3f3f3;
+		border-bottom-right-radius: 3px;
+		padding: 10px;
+		width: 40px;
+		float: right;
+		background: #fff;
+		color: #dd2828;
+		border-left: 0;
+		transition: all .2s ease-in-out;
+	}
+		.uploads-main button:hover {
+			background: #dd2828;
+			border: 1px solid #dd2828;
+			border-left: 0;
+			border-bottom-right-radius: 3px;
+			color: #fff;
+			outline: 0;
+		}
+		.uploads-main button:active {
+			outline: 0;
+			border: 1px solid #dd2828;
+			border-left: 0;
+		}
+	#uploads-error {
+		text-align: center;
+	}
+		#uploads-error p {
+			font-weight: 500;
+		}
+.remove_msg {
+	margin: 0 auto;
+	animation: 0.5s ease-in-out 0s 1 slideDownFromTop;
+	color: #fff;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+}
+	.remove_msg div {
+		position: relative;
+		background: #dd2828;
+		width: 400px;
+		left: -50%;
+		padding: 20px;
+		box-shadow: #8a8a8a 0 0 20px;
+	}
+	.remove_msg h1 {
+		font-size: 1em;
+	}
+	.rm_file_name {
+		border-bottom: 2px solid #fff;
+	}
+	.remove_msg .fa-snowflake {
+		font-size: 2em;
+		margin: 10px 0 0 0;
+	}
+
+/* ACCOUNTS ACCOUNTS ACCOUNTS */
+#account-info {
+	max-width: 400px;
+	float: left;
+}
+	#account-info form {}
+		#account-info input, #login input, #register input {
+			display: block;
+			border: 1px solid #cecece;
+			border-radius: 3px;
+			padding: 10px;
+			margin: 0 0 10px 0;
+			transition: all .2s ease-in-out;
+		}
+			#account-info input, 
+			#register input,
+			#login input {
+				width: 300px;
+			}
+			#account-info input:focus, #login input:focus, #register input:focus {
+				border: 1px solid #444;
+			}
+			#account-info input:hover, #login input:hover, #register input:hover {
+				border: 1px solid #777;
+			}
+			#account-info div {
+				padding: 10px 0;
+				font-weight: 400;
+			}
+			#account-info button {
+				background: #dd2828;
+				padding: 10px;
+				border: 1px solid #dd2828;
+				border-radius: 3px;
+				color: #4b0909;
+				font-weight: 700;
+				cursor: pointer;
+				margin: 150px 0 0 0;
+				transition: all .2s ease-in-out;
+			}
+			#account-info button:hover {
+				color: #fff;
+			}
+		.missing_field {
+			border: 1px solid #dd2828 !important;
+		}
+		#account h4, .uploads-header h2 {
+			font-size: 1.8em;
+			font-weight: 600;
+			color: #dd2828;
+			margin: 0;
+			padding: 0;
+		}
+		#account h2, .uploads-header p {
+			font-size: 1.2em;
+			font-weight: 700;
+			color: #333;
+			padding: 0;
+			margin: 10px 0;
+		}
+		.ai_icon {
+			width: 30px;
+			display: inline-block;
+		}
+		.ai_label {
+			padding: 10px 10px 10px 0;
+			display: inline-block;
+		}
+#account-desc {
+	float: right;
+	max-width: 700px;
+}
+	#account-desc p {
+		line-height: 1.7em;
+	}
+#logout {
+	width: 1140px;
+	text-align: center;
+}
+	#logout h2 {
+		color: #dd2828;
+	}
+.reg_done {
+	width: 1140px;
+	text-align: center;
+}
+	.reg_done h2 {
+		font-size: 2em;
+		font-weight: 500;
+	}
+		.hmm img {
+			width: 48px;
+			height: auto;
+		}

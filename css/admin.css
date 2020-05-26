@@ -1,0 +1,111 @@
+/* admin.css */
+header {
+	height: 120px;
+}
+.home a {
+	background: #dd2828;
+	border: 1px solid #fff;
+	color: #fff;
+}
+#user-table {
+	max-width: 1140px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+	#user-table li {
+		width: 100%;
+		display: block;
+		overflow: auto;
+	}
+		#user-table li:nth-child(2n) {
+			background: #f6f6f6;
+		}
+		#user-table li div {
+			float: left;
+			padding: 5px 10px;
+			font-family: "Roboto Mono", monospace;
+		}
+			/* users */
+			#user-table .t_userid {
+				width: 5%;
+			}
+			#user-table .t_usernm {
+				width: 15%;
+			}
+			#user-table .t_emaily {
+				width: 30%;
+			}
+			#user-table .t_uplods {
+				width: 10%;
+			}
+			#user-table .t_reg_ip {
+				width: 15%;
+			}
+			#user-table .t_regdat {
+				width: 15%;
+			}
+			#user-table .t_action {
+				width: 10%;
+			}
+			/* uploads */
+			#user-table .t_finame {
+				width: 20%;
+			}
+			#user-table .t_fisize {
+				width: 15%;
+			}
+			#user-table .t_uplodt {
+				width: 30%;
+			}
+			#user-table .t_uploip {
+				width: 20%;
+			}
+				#user-table .t_action button {
+					padding: 0;
+					margin: 0;
+					border: 0;
+					color: #dd2828;
+					background: rgba(0,0,0,0);
+					outline: 0;
+					cursor: pointer;
+				}
+					#user-table .t_action button:hover {
+						text-decoration: underline;
+					}
+		.t_head {
+			font-weight: 600;
+			background: #dd2828;
+			color: #fff;
+		}
+		#stats {
+			width: 1140px;
+			display: block;
+			margin: 0 0 60px 0;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+			#stats div {
+				float: left;
+				flex: 1 0 auto;
+			}
+			#stats .usercount, #stats .imagecount {
+				width: 33%;
+				text-align: center;
+			}
+			#stats h1 {
+				font-weight: 400;
+				font-size: 4em;
+				color: #dd2828;
+				margin: 0;
+				padding: 0;
+			}
+			#stats h2 {
+				font-size: 1em;
+				font-weight: 700;
+				margin: 0;
+				padding: 0;
+				color: #777;
+			}
